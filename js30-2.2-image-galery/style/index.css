@@ -35,16 +35,17 @@ h1 {
     margin:0 160px 0 15px;
 }
 input {
-    width: 340px;
-    height: 34px;
+    width: 320px;
+    height: 14px;
     margin-left: 150px;
     border-radius: 20px;
     border: 1px solid #b3b3b3;
+    padding: 10px 20px;
 }
 input::placeholder {
     color: rgb(145, 145, 145);
     font-size: 1.2em;
-    padding: 1px 0 0 10px;
+    padding: 1px 0 0 2px;
   }
 .magnifying-glass {
     position: relative;
@@ -53,6 +54,7 @@ input::placeholder {
     height: 25px;
     width: 25px;
     border-radius: 20px;
+    cursor: pointer;
   }
   .line {
     width: auto;
