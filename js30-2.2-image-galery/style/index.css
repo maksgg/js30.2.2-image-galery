@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter&family=Mooli&display=swap');
+
 body {
     margin: 0;
+    padding: 0;
     background-color: rgb(255, 255, 255);
+    font-family: 'Mooli', sans-serif;
 }
 
 
@@ -60,24 +64,57 @@ input::placeholder {
   /*main decoration*/
 
 
-  main {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
-  table {
-    border-spacing: 25px;
+.search-results {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-  td {
-    width: 380px;
-    height: 230px;
-    border: 1px solid #000;
-  }
-
+.search-result {
+  margin-top:  50px;
+  width: 30%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.search-result img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease-in-out;
+}
+.search-result:hover img {
+  opacity: 0.8;
+}
+.search-result a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  text-transform: capitalize;
+}
+#show-more-botton {
+  background-color: #008cba;
+  font-size: 18px;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
 
   /* footer decoration*/
-
 
   .footer_conteiner {
     display: flex;
@@ -103,4 +140,16 @@ input::placeholder {
     width: 420px;
     font-size: 28px;
     text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .search-result {
+      width: 45%;
+      padding: 20px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .search-result {
+      width: 100%;
+    } 
   }
